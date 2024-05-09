@@ -1,7 +1,7 @@
 const { getAll } = require('../../data/pokeneas');
 
 class PokeneasApiController {
-    static getPokenea(req, res) {
+    static getPokeneas(req, res) {
         const pokeneas = getAll();
 
         const randomIndex = Math.floor(Math.random() * pokeneas.length);
