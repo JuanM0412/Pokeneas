@@ -1,13 +1,10 @@
-require('dotenv').config()
-const express = require('express')
-const cors = require('cors')
-const app = express()
-const port = process.env.PORT || 3000
+const app = require('./config/app'); 
+//const apiRoutes = require('./app/routes/api')
+const webRoutes = require('./app/routes/web')
 
-app.use(cors())
+//app.use('/api', apiRoutes)
+app.use('/', webRoutes)
 
-app.use('/', require('./app/routes'))
-
-app.listen(port, () => {    
-    console.log(`Server is running on port: ${port}`)
+app.listen(app.get('port'), () => {
+    console.log(`Server is running on port: ${app.get('port')}`)
 })
