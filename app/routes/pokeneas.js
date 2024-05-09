@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const { getPokeneas, getPokenea } = require('../controllers/pokeneas');
 
-router.get('/', getPokeneas)
+router.get('/api', getPokeneas)
 
-router.get('/:id', getPokenea)
+router.get('/', getPokenea)
 
 module.exports = router

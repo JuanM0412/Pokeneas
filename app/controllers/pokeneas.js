@@ -1,9 +1,11 @@
+const { getAll } = require('../data/pokeneas');
+
 const getPokeneas = (req, res) => {
-    res.send({ list: [1, 2, 3] })
+    res.send({ list: getAll() });
 }
 
 const getPokenea = (req, res) => {
-    res.send({ list: [4, 5, 6] })
+    res.send({ list: getAll() });
 }
 
-module.exports = { getPokeneas, getPokenea }
+module.exports = { getPokeneas, getPokenea };
