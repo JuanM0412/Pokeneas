@@ -16,5 +16,4 @@ class PokeneasApiController {
         });
     }
 }
-
 module.exports = PokeneasApiController;
