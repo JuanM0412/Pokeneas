@@ -1,4 +1,5 @@
 const { getAll } = require('../../data/pokeneas');
+const os = require("os")
 
 class PokeneasApiController {
     static getPokeneas(req, res) {
@@ -12,7 +13,8 @@ class PokeneasApiController {
             id: randomPokenea.id,
             name: randomPokenea.name,
             height: randomPokenea.height,
-            ability: randomPokenea.ability
+            ability: randomPokenea.ability,
+            idContainer: os.hostname()
         });
     }
 }

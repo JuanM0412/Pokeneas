@@ -1,4 +1,5 @@
 const { getAll } = require('../data/pokeneas');
+const os = require("os")
 
 class PokeneasController {
     static show(req, res) {
@@ -11,6 +12,7 @@ class PokeneasController {
         const viewData = {
             image,
             philosophicalPhrase,
+            idContainer: os.hostname()
         }
 
         res.render('pokeneas/show', {viewData: viewData})
